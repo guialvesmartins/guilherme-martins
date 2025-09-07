@@ -1,0 +1,16 @@
+{
+  "meta_tags_test": {
+    "og_title": "Guilherme Martins - Desenvolvedor Full Stack",
+    "og_description": "Full Stack Developer com +7 anos de experiência. Especialista em Java, Spring, React, Node.js e integrações de sistemas.",
+    "og_image": "   ",
+    "og_url": "https://guialvesmartins.github.io/guilherme-martins/",
+    "twitter_card": "summary_large_image",
+    "recommended_image_size": "1200x630px",
+    "current_image_path": "/images/avatar.jpg"
+  },
+  "testing_urls": [
+    "https://developers.facebook.com/tools/debug/",
+    "https://cards-dev.twitter.com/validator",
+    "https://www.linkedin.com/post-inspector/"
+  ]
+}
