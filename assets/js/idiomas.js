@@ -96,7 +96,7 @@ const TEXTOS = {
     },
     es: {
         'nav-home': 'Inicio',
-        'nav-about': 'Acerca',
+        'nav-about': 'Sobre mí',
         'nav-skills': 'Tecnologías', 
         'nav-experience': 'Experiencia',
         'nav-education': 'Formación',
@@ -108,7 +108,7 @@ const TEXTOS = {
         'hero-contact': 'Contáctame', 
         'hero-know-more': 'Saber Más',
         
-        'about-title': 'Acerca de Mí',
+        'about-title': 'Sobre Mí',
         'about-subtitle': 'Conóceme un poco más',
         'about-description-1': 'Desarrollador Full Stack enfocado en aplicaciones web modernas y sistemas empresariales. Con más de 7 años de experiencia, me especializo en la creación de soluciones robustas que conectan tecnología y necesidades empresariales.',
         'about-description-2': 'Poseo experiencia previa como especialista en ERP TOTVS Protheus, donde trabajé con procesos críticos e integraciones complejas. Esta experiencia me brindó una visión amplia de las necesidades empresariales, que hoy aplico en el desarrollo de sistemas web robustos y conectados.',

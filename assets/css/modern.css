@@ -1347,6 +1347,23 @@ section {
         justify-content: flex-end;
         margin-bottom: 1rem;
     }
+    
+    /* Corrigir sobreposição do scroll-indicator com hero-social em mobile */
+    .hero-social {
+        position: relative;
+        z-index: 10;
+        margin-bottom: 1rem;
+    }
+    
+    .scroll-indicator {
+        bottom: 10px;
+        z-index: 5;
+    }
+    
+    .scroll-arrow {
+        width: 25px;
+        height: 25px;
+    }
 
     .hero-title {
         font-size: 2.5rem;
@@ -1792,6 +1809,22 @@ section {
     
     .language-item {
         margin-bottom: 1.5rem !important;
+    }
+    
+    /* Correção adicional para scroll-indicator em mobile muito pequeno */
+    .hero-social {
+        margin-bottom: 1.5rem !important;
+        justify-content: center;
+    }
+    
+    .scroll-indicator {
+        bottom: 5px !important;
+        opacity: 0.8;
+    }
+    
+    .scroll-arrow {
+        width: 20px !important;
+        height: 20px !important;
     }
 }
 
