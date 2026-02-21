@@ -1,0 +1,18 @@
+services:
+  portfolio:
+    image: guilherme-portfolio:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: guilherme-portfolio
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true
