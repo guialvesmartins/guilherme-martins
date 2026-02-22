@@ -9,7 +9,7 @@ import { useLanguage } from "@/i18n/language-provider";
 
 const stats = [
   { value: "8+", key: "hero-years" },
-  { value: "10+", key: "hero-projects" },
+  { value: "20+", key: "hero-projects" },
   { value: "15+", key: "hero-technologies" },
 ];
 
