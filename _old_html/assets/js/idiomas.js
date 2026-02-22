@@ -8,14 +8,14 @@ const TEXTOS = {
         'nav-contact': 'Contato',
         
         'hero-title': 'Olá, sou Guilherme Martins',
-        'hero-subtitle': 'Desenvolvedor Full Stack', 
+        'hero-subtitle': 'Desenvolvedor Fullstack', 
         'hero-description': 'Transformo ideias em soluções digitais, criando aplicações web modernas e integrando sistemas empresariais com foco na eficiência.',
         'hero-contact': 'Entre em Contato',
         'hero-know-more': 'Saber Mais',
         
         'about-title': 'Sobre Mim',
         'about-subtitle': 'Conheça um pouco mais',
-        'about-description-1': 'Desenvolvedor Full Stack enfocado em aplicações web modernas e sistemas empresariais. Com mais de 7 anos de experiência, especializo-me na criação de soluções robustas que conectam tecnologia e necessidades empresariais.',
+        'about-description-1': 'Desenvolvedor Fullstack enfocado em aplicações web modernas e sistemas empresariais. Com mais de 7 anos de experiência, especializo-me na criação de soluções robustas que conectam tecnologia e necessidades empresariais.',
         'about-description-2': 'Possuo experiência prévia como especialista no ERP TOTVS Protheus, onde trabalhei com processos críticos e integrações complexas. Essa bagagem me trouxe uma visão ampla das necessidades empresariais, que hoje aplico no desenvolvimento de sistemas web robustos e conectados.',
         
         'soft-skills-title': 'Soft Skills',
@@ -52,7 +52,7 @@ const TEXTOS = {
         'experience-title': 'Experiência Profissional',
         'experience-subtitle': 'Minha jornada profissional',
         'current-badge': 'Atual',
-        'job-title-1': 'Analista de Sistemas III (Full Stack)',
+        'job-title-1': 'Analista de Sistemas III (Fullstack)',
         'job-desc-1': 'Integração entre sistemas internos, ERP, APIs bancárias e outros sistemas externos, além da manutenção e desenvolvimento de aplicações utilizando Java, Quarkus, Spring, JSF, React, TypeScript e Node.js. Atuação no desenvolvimento de APIs RESTful, integração com bancos de dados relacionais e na manutenção e evolução de arquiteturas baseadas em microsserviços.',
         'job-title-2': 'Analista de Sistemas III (Protheus)',
         'job-desc-2': 'Especialista em ERP Protheus, responsável pela atualização e manutenção da estrutura de dados, stored procedures, suporte a usuários-chave e elaboração de relatórios. Desenvolvi rotinas ADVPL, implantei módulos, realizei treinamentos e participei de migrações de versão. Também atuei no suporte de TI, incluindo manutenção de hardware e suporte presencial/remoto.',
@@ -65,7 +65,7 @@ const TEXTOS = {
         
         'education-title': 'Formação Acadêmica',
         'education-subtitle': 'Minha formação acadêmica',
-        'education-1-title': 'Pós-graduação em Desenvolvimento Web e Mobile - Full Stack',
+        'education-1-title': 'Pós-graduação em Desenvolvimento Web e Mobile - Fullstack',
         'education-1-institution': 'Universidade Federal de Goiás - UFG',
         'education-1-year': '2024 - 2025',
         'education-1-desc': 'Especialização focada em tecnologias modernas de desenvolvimento web e mobile, abrangendo frameworks atuais e metodologias ágeis de desenvolvimento.',
@@ -103,14 +103,14 @@ const TEXTOS = {
         'nav-contact': 'Contacto',
         
         'hero-title': 'Hola, soy Guilherme Martins',
-        'hero-subtitle': 'Desarrollador Full Stack',
+        'hero-subtitle': 'Desarrollador Fullstack',
         'hero-description': 'Trabajo en el desarrollo web moderno y la integración de sistemas empresariales, transformando necesidades en soluciones eficientes.',
         'hero-contact': 'Contáctame', 
         'hero-know-more': 'Saber Más',
         
         'about-title': 'Sobre Mí',
         'about-subtitle': 'Conóceme un poco más',
-        'about-description-1': 'Desarrollador Full Stack enfocado en aplicaciones web modernas y sistemas empresariales. Con más de 8 años de experiencia, me especializo en la creación de soluciones robustas que conectan tecnología y necesidades empresariales.',
+        'about-description-1': 'Desarrollador Fullstack enfocado en aplicaciones web modernas y sistemas empresariales. Con más de 8 años de experiencia, me especializo en la creación de soluciones robustas que conectan tecnología y necesidades empresariales.',
         'about-description-2': 'Poseo experiencia previa como especialista en ERP TOTVS Protheus, donde trabajé con procesos críticos e integraciones complejas. Esta experiencia me brindó una visión amplia de las necesidades empresariales, que hoy aplico en el desarrollo de sistemas web robustos y integrados.',
         
         'soft-skills-title': 'Soft Skills',
@@ -147,7 +147,7 @@ const TEXTOS = {
         'experience-title': 'Experiencia Profesional',
         'experience-subtitle': 'Mi trayectoria profesional', 
         'current-badge': 'Actual',
-        'job-title-1': 'Analista de Sistemas IV (Full Stack)',
+        'job-title-1': 'Analista de Sistemas IV (Fullstack)',
         'job-desc-1': 'Integración entre sistemas internos, ERP, APIs bancarias y otros sistemas externos, además del mantenimiento y desarrollo de aplicaciones utilizando Java, Quarkus, Spring, JSF, React, TypeScript y Node.js. Actuación en el desarrollo de APIs RESTful, integración con bases de datos relacionales y en el mantenimiento y evolución de arquitecturas basadas en microservicios.',
         'job-title-2': 'Analista de Sistemas III (Protheus)',
         'job-desc-2': 'Analista de Sistemas con enfoque en ERP Protheus, abarcando actualización y mantenimiento de estructura de datos, stored procedures, soporte a usuarios clave, elaboración de reportes, desarrollo de rutinas ADVPL, implementación de módulos, entrenamiento en rutinas personalizadas y participación en migraciones de versión. Experiencia en soporte de TI, incluyendo mantenimiento de hardware, gestión de tickets de infraestructura y soporte presencial/remoto a colaboradores.',
@@ -160,7 +160,7 @@ const TEXTOS = {
         
         'education-title': 'Formación Académica',
         'education-subtitle': 'Mi base educacional',
-        'education-1-title': 'Posgrado en Desarrollo Web y Mobile - Full Stack',
+        'education-1-title': 'Posgrado en Desarrollo Web y Mobile - Fullstack',
         'education-1-institution': 'Universidad Federal de Goiás - UFG',
         'education-1-year': '2024 - 2025',
         'education-1-desc': 'Especialización enfocada en tecnologías modernas de desarrollo web y mobile, abarcando frameworks actuales y metodologías ágiles.',
@@ -265,7 +265,7 @@ function showWelcome(language, isLanguageChange = false) {
     console.log(msg.introduction);
     console.log("");
     console.log("%c👨🏻‍💻 Guilherme Martins", "color:#0066cc; font-size:16px; font-weight:bold;");
-    console.log("🚀 Full Stack Developer | Java | Spring | Quarkus | C# | ASP.NET | React | Node.js | TypeScript | SQL Server | PostgreSQL | ERP Protheus");
+    console.log("🚀 Fullstack Developer | Java | Spring | Quarkus | C# | ASP.NET | React | Node.js | TypeScript | SQL Server | PostgreSQL | ERP Protheus");
     console.log("");
     console.log(msg.skills);
     console.log(msg.experience);

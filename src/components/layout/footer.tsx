@@ -18,7 +18,7 @@ export function Footer() {
               GUILHERME MARTINS<span className="text-accent">.</span>
             </span>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Desenvolvedor Full Stack focado em criar soluções robustas que conectam tecnologia e negócios.
+              Desenvolvedor Fullstack focado em criar soluções robustas que conectam tecnologia e negócios.
             </p>
           </div>
 

@@ -21,7 +21,7 @@ export const projects: Project[] = [
     titleKey: "project-arena-title",
     descriptionKey: "project-arena-desc",
     longDescriptionKey: "project-arena-long",
-    tags: ["Full Stack", "SaaS", "Multi-tenant"],
+    tags: ["Fullstack", "SaaS", "Multi-tenant"],
     techStack: ["Quarkus", "Java 21", "PostgreSQL", "Keycloak", "React 19", "TypeScript", "Tailwind CSS", "Zustand", "React Query", "Vite"],
     liveUrl: "https://arenafacil.com.br",
     images: [
@@ -39,7 +39,7 @@ export const projects: Project[] = [
     titleKey: "project-pacotera-title",
     descriptionKey: "project-pacotera-desc",
     longDescriptionKey: "project-pacotera-long",
-    tags: ["Full Stack", "Finanças"],
+    tags: ["Fullstack", "Finanças"],
     techStack: ["Node.js", "Express", "TypeScript", "Prisma ORM", "PostgreSQL", "JWT", "React", "Vite", "TailwindCSS", "Radix UI", "TanStack Query", "Docker", "Docker Swarm"],
     liveUrl: "https://pacotera.guilhermemartins.dev.br",
     images: [
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     titleKey: "project-myeventos-title",
     descriptionKey: "project-myeventos-desc",
     longDescriptionKey: "project-myeventos-long",
-    tags: ["Full Stack", "API REST"],
+    tags: ["Fullstack", "API REST"],
     techStack: ["ASP.NET Core", "C#", "Angular", "TypeScript", "HTML"],
     images: [
       "/projects/my-eventos/print_project1.png",

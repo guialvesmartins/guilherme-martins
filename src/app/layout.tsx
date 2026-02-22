@@ -19,12 +19,12 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Guilherme Martins | Desenvolvedor Full Stack",
+  title: "Guilherme Martins | Desenvolvedor Fullstack",
   description:
-    "Desenvolvedor Full Stack com mais de 8 anos de experiência em Java, Spring, Quarkus, React, TypeScript e ERP TOTVS Protheus. Baseado em Goiânia, GO.",
+    "Desenvolvedor Fullstack com mais de 8 anos de experiência em Java, Spring, Quarkus, React, TypeScript e ERP TOTVS Protheus. Baseado em Goiânia, GO.",
   keywords: [
     "Guilherme Martins",
-    "Full Stack Developer",
+    "Fullstack Developer",
     "Java",
     "Spring Boot",
     "Quarkus",
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     alternateLocale: ["es_ES"],
     url: "https://guilhermemartins.dev.br",
-    title: "Guilherme Martins | Desenvolvedor Full Stack",
+    title: "Guilherme Martins | Desenvolvedor Fullstack",
     description:
-      "Desenvolvedor Full Stack com mais de 8 anos de experiência em Java, Spring, React e ERP TOTVS Protheus.",
+      "Desenvolvedor Fullstack com mais de 8 anos de experiência em Java, Spring, React e ERP TOTVS Protheus.",
     siteName: "Guilherme Martins",
     images: [
       {
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Guilherme Martins | Desenvolvedor Full Stack",
+    title: "Guilherme Martins | Desenvolvedor Fullstack",
     description:
-      "Desenvolvedor Full Stack com mais de 8 anos de experiência em Java, Spring, React e ERP TOTVS Protheus.",
+      "Desenvolvedor Fullstack com mais de 8 anos de experiência em Java, Spring, React e ERP TOTVS Protheus.",
     images: ["/avatar.png"],
   },
   robots: { index: true, follow: true },
