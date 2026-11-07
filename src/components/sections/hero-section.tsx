@@ -6,9 +6,10 @@ import { Github, Linkedin, Mail, ArrowRight, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useLanguage } from "@/i18n/language-provider";
+import { yearsOfExperience } from "@/data/profile";
 
 const stats = [
-  { value: "8+", key: "hero-years" },
+  { value: `${yearsOfExperience()}+`, key: "hero-years" },
   { value: "20+", key: "hero-projects" },
   { value: "15+", key: "hero-technologies" },
 ];
@@ -19,7 +20,7 @@ const socialLinks = [
   { href: "mailto:guilhermealmartins@gmail.com", icon: Mail, label: "Email" },
 ];
 
-const techBadges = ["Java", "Spring", "React", "TypeScript", "Next.js", "SQL Server"];
+const techBadges = ["Java", "Quarkus", "Spring", "React", "TypeScript", "Node.js", "SQL Server"];
 
 export function HeroSection() {
   const { t } = useLanguage();
@@ -103,7 +104,7 @@ export function HeroSection() {
             <div className="relative">
               <div className="w-56 h-56 sm:w-64 sm:h-64 rounded-full border-2 border-primary animate-pulse-glow overflow-hidden">
                 <Image
-                  src="/avatar.png"
+                  src="/profile.jpg"
                   alt="Guilherme Martins"
                   width={256}
                   height={256}
@@ -112,9 +113,9 @@ export function HeroSection() {
                 />
               </div>
               {/* Status badge */}
-              <div className="absolute bottom-3 right-3 flex items-center gap-1.5 bg-card border border-border rounded-full px-3 py-1 text-xs font-medium">
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 bg-card border border-border rounded-full px-3 py-1 text-xs font-medium shadow-sm">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-foreground">Open to work</span>
+                <span className="text-foreground whitespace-nowrap">{t("hero-status")}</span>
               </div>
             </div>
 

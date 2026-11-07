@@ -1,9 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { Github, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import { useLanguage } from "@/i18n/language-provider";
 import { Separator } from "@/components/ui/separator";
+import { WhatsAppIcon } from "@/components/icons/whatsapp-icon";
+import { PHONE_DISPLAY, whatsappUrl } from "@/data/profile";
 
 export function Footer() {
   const { t } = useLanguage();
@@ -18,7 +20,7 @@ export function Footer() {
               GUILHERME MARTINS<span className="text-accent">.</span>
             </span>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Desenvolvedor Fullstack focado em criar soluções robustas que conectam tecnologia e negócios.
+              {t("footer-description")}
             </p>
           </div>
 
@@ -26,9 +28,18 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold text-foreground mb-4">{t("contact-title")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-primary shrink-0" />
-                <span>(62) 98145-7836</span>
+              <li>
+                <a
+                  href={whatsappUrl(t("contact-whatsapp-message"))}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:text-foreground transition-colors"
+                  aria-label={`${t("contact-whatsapp-label")}: ${PHONE_DISPLAY}`}
+                  title={t("contact-whatsapp-label")}
+                >
+                  <WhatsAppIcon className="h-4 w-4 text-primary shrink-0" />
+                  <span>{PHONE_DISPLAY}</span>
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-primary shrink-0" />
@@ -79,7 +90,7 @@ export function Footer() {
         <Separator className="my-8 bg-border" />
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted-foreground">
-          <p>{t("footer-text")}</p>
+          <p>© {new Date().getFullYear()} Guilherme Martins. {t("footer-text")}</p>
           <p>{t("footer-rights")}</p>
         </div>
       </div>

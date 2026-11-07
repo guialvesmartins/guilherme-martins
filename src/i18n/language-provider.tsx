@@ -7,18 +7,23 @@ import es from "./es.json";
 type Language = "pt" | "es";
 type Translations = Record<string, string>;
 
+/** Texto escrito direto nos dados (projetos), nos dois idiomas. */
+export type Localized = Record<Language, string>;
+
 const translations: Record<Language, Translations> = { pt, es };
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
+  tl: (value: Localized) => string;
 }
 
 const LanguageContext = createContext<LanguageContextType>({
   language: "pt",
   setLanguage: () => {},
   t: (key) => key,
+  tl: (value) => value.pt,
 });
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
@@ -43,8 +48,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     [language]
   );
 
+  const tl = useCallback((value: Localized): string => value[language] ?? value.pt, [language]);
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, tl }}>
       {children}
     </LanguageContext.Provider>
   );

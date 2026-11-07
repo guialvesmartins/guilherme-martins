@@ -18,7 +18,6 @@ export interface SoftSkill {
 export interface Language {
   key: string;
   levelKey: string;
-  percentage: number;
   flag: string;
 }
 
@@ -28,9 +27,9 @@ export const techCategories: TechCategory[] = [
     titleKey: "backend-title",
     icon: "Server",
     items: [
-      { labelKey: "tech-languages", values: ["Java", "C#"] },
-      { labelKey: "tech-frameworks", values: ["Spring Boot", "Quarkus", "ASP.NET"] },
-      { labelKey: "tech-architecture", values: ["Microsserviços", "REST APIs", "Integrações"] },
+      { labelKey: "tech-languages", values: ["Java", "TypeScript", "C#"] },
+      { labelKey: "tech-frameworks", values: ["Spring Boot", "Quarkus", "Node.js / Express", "ASP.NET"] },
+      { labelKey: "tech-architecture", values: ["Microsserviços", "REST APIs", "Integrações", "Multi-tenancy", "Keycloak / OIDC"] },
     ],
   },
   {
@@ -47,7 +46,7 @@ export const techCategories: TechCategory[] = [
     titleKey: "database-title",
     icon: "Database",
     items: [
-      { labelKey: "tech-languages", values: ["SQL Server", "PostgreSQL", "MySQL"] },
+      { labelKey: "tech-languages", values: ["SQL Server", "PostgreSQL", "MySQL", "MongoDB"] },
       { labelKey: "tech-tools", values: ["Stored Procedures", "Queries Complexas", "Modelagem"] },
     ],
   },
@@ -67,7 +66,7 @@ export const techCategories: TechCategory[] = [
     items: [
       { labelKey: "tech-practices", values: ["Clean Code", "SOLID"] },
       { labelKey: "tech-architecture-patterns", values: ["Clean Architecture", "DDD"] },
-      { labelKey: "tech-devops", values: ["CI/CD", "Git Flow", "Docker"] },
+      { labelKey: "tech-devops", values: ["Docker", "Docker Swarm", "GitHub Actions", "Git Flow"] },
     ],
   },
 ];
@@ -86,13 +85,11 @@ export const spokenLanguages: Language[] = [
   {
     key: "language-portuguese",
     levelKey: "level-native",
-    percentage: 100,
     flag: "🇧🇷",
   },
   {
     key: "language-spanish",
     levelKey: "level-intermediate-advanced",
-    percentage: 75,
     flag: "🇪🇸",
   },
 ];

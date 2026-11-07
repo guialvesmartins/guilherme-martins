@@ -3,9 +3,9 @@
 import { useLanguage } from "@/i18n/language-provider";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
 import { techCategories, softSkills, spokenLanguages } from "@/data/skills";
 import { education } from "@/data/experience";
+import { yearsOfExperience } from "@/data/profile";
 import {
   Server,
   Monitor,
@@ -46,7 +46,7 @@ export function AboutContent() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <div className="mb-12">
-          <p className="font-mono text-primary text-sm mb-2">// about-me</p>
+          <p className="font-mono text-primary text-sm mb-2">{"// about-me"}</p>
           <h1 className="text-4xl font-bold gradient-text mb-3">{t("about-title")}</h1>
           <p className="text-muted-foreground">{t("about-subtitle")}</p>
         </div>
@@ -59,7 +59,9 @@ export function AboutContent() {
               <User className="h-5 w-5 text-primary" />
               <h2 className="text-xl font-semibold">{t("about-title")}</h2>
             </div>
-            <p className="text-muted-foreground leading-relaxed">{t("about-description-1")}</p>
+            <p className="text-muted-foreground leading-relaxed">
+              {t("about-description-1").replace("{years}", String(yearsOfExperience()))}
+            </p>
             <p className="text-muted-foreground leading-relaxed">{t("about-description-2")}</p>
           </div>
 
@@ -85,23 +87,17 @@ export function AboutContent() {
             {/* Languages */}
             <div className="mt-8">
               <h2 className="text-xl font-semibold mb-4">{t("languages-title")}</h2>
-              <div className="space-y-4">
-                {spokenLanguages.map(({ key, levelKey, percentage, flag }) => (
-                  <div key={key}>
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-sm font-medium flex items-center gap-2">
-                        <span>{flag}</span>
-                        {t(key)}
-                      </span>
-                      <span className="text-xs text-muted-foreground">{t(levelKey)}</span>
-                    </div>
-                    <Progress
-                      value={percentage}
-                      className="h-2 bg-secondary [&>div]:bg-primary"
-                    />
-                  </div>
+              <ul className="divide-y divide-border rounded-lg border border-border">
+                {spokenLanguages.map(({ key, levelKey, flag }) => (
+                  <li key={key} className="flex items-center justify-between px-4 py-3">
+                    <span className="text-sm font-medium flex items-center gap-2">
+                      <span>{flag}</span>
+                      {t(key)}
+                    </span>
+                    <span className="text-xs text-muted-foreground">{t(levelKey)}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
         </div>
@@ -109,7 +105,7 @@ export function AboutContent() {
         {/* Tech Stack */}
         <div>
           <div className="mb-8">
-            <p className="font-mono text-primary text-sm mb-2">// tech-stack</p>
+            <p className="font-mono text-primary text-sm mb-2">{"// tech-stack"}</p>
             <h2 className="text-3xl font-bold mb-2">{t("skills-title")}</h2>
             <p className="text-muted-foreground">{t("skills-subtitle")}</p>
           </div>
@@ -157,7 +153,7 @@ export function AboutContent() {
         {/* Education */}
         <div className="mt-16">
           <div className="mb-8">
-            <p className="font-mono text-primary text-sm mb-2">// education</p>
+            <p className="font-mono text-primary text-sm mb-2">{"// education"}</p>
             <h2 className="text-3xl font-bold mb-2">{t("education-title")}</h2>
             <p className="text-muted-foreground">{t("education-subtitle")}</p>
           </div>

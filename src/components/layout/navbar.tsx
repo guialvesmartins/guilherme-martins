@@ -2,13 +2,19 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import { Menu, Sun, Moon } from "lucide-react";
 import { useLanguage } from "@/i18n/language-provider";
 import { useTheme } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
+/** Fitinha com as cores da bandeira, ao lado da sigla. */
+const languages = [
+  { code: "pt", label: "PT", name: "Português", ribbon: "linear-gradient(#009c3b 37.5%, #ffdf00 37.5% 75%, #2a5fd0 75%)" },
+  { code: "es", label: "ES", name: "Español", ribbon: "linear-gradient(#c60b1e 25%, #ffc400 25% 75%, #c60b1e 75%)" },
+] as const;
 
 const navLinks = [
   { href: "/", key: "nav-home" },
@@ -54,31 +60,28 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           {/* Language switcher */}
           <div className="flex items-center font-mono text-xs border border-border rounded-md overflow-hidden">
-            <button
-              onClick={() => setLanguage("pt")}
-              className={cn(
-                "px-2.5 py-1.5 transition-colors",
-                language === "pt"
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              )}
-              aria-label="Português"
-            >
-              PT
-            </button>
-            <span className="w-px h-4 bg-border" />
-            <button
-              onClick={() => setLanguage("es")}
-              className={cn(
-                "px-2.5 py-1.5 transition-colors",
-                language === "es"
-                  ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:text-foreground"
-              )}
-              aria-label="Español"
-            >
-              ES
-            </button>
+            {languages.map(({ code, label, name, ribbon }, i) => (
+              <Fragment key={code}>
+                {i > 0 && <span className="w-px h-4 bg-border" />}
+                <button
+                  onClick={() => setLanguage(code)}
+                  className={cn(
+                    "flex items-center gap-1.5 px-2.5 py-1.5 transition-colors",
+                    language === code
+                      ? "bg-primary text-primary-foreground"
+                      : "text-muted-foreground hover:text-foreground"
+                  )}
+                  aria-label={name}
+                >
+                  <span
+                    aria-hidden="true"
+                    className={cn("w-[3px] h-3 rounded-full transition-opacity", language === code ? "opacity-100" : "opacity-60")}
+                    style={{ background: ribbon }}
+                  />
+                  {label}
+                </button>
+              </Fragment>
+            ))}
           </div>
 
           {/* Theme toggle */}

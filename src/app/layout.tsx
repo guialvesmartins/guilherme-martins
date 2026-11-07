@@ -5,6 +5,9 @@ import { LanguageProvider } from "@/i18n/language-provider";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { yearsOfExperience } from "@/data/profile";
+
+const years = yearsOfExperience();
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -21,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Guilherme Martins | Desenvolvedor Fullstack",
   description:
-    "Desenvolvedor Fullstack com mais de 8 anos de experiência em Java, Spring, Quarkus, React, TypeScript e ERP TOTVS Protheus. Baseado em Goiânia, GO.",
+    `Desenvolvedor Fullstack com mais de ${years} anos de experiência em Java, Spring, Quarkus, React, TypeScript e ERP TOTVS Protheus. Baseado em Goiânia, GO.`,
   keywords: [
     "Guilherme Martins",
     "Fullstack Developer",
@@ -44,13 +47,13 @@ export const metadata: Metadata = {
     url: "https://guilhermemartins.dev.br",
     title: "Guilherme Martins | Desenvolvedor Fullstack",
     description:
-      "Desenvolvedor Fullstack com mais de 8 anos de experiência em Java, Spring, React e ERP TOTVS Protheus.",
+      `Desenvolvedor Fullstack com mais de ${years} anos de experiência em Java, Spring, React e ERP TOTVS Protheus.`,
     siteName: "Guilherme Martins",
     images: [
       {
-        url: "/avatar.png",
-        width: 400,
-        height: 400,
+        url: "/profile.jpg",
+        width: 640,
+        height: 640,
         alt: "Guilherme Martins",
       },
     ],
@@ -59,8 +62,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Guilherme Martins | Desenvolvedor Fullstack",
     description:
-      "Desenvolvedor Fullstack com mais de 8 anos de experiência em Java, Spring, React e ERP TOTVS Protheus.",
-    images: ["/avatar.png"],
+      `Desenvolvedor Fullstack com mais de ${years} anos de experiência em Java, Spring, React e ERP TOTVS Protheus.`,
+    images: ["/profile.jpg"],
   },
   robots: { index: true, follow: true },
   metadataBase: new URL("https://guilhermemartins.dev.br"),

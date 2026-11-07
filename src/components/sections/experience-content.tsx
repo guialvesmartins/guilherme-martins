@@ -15,7 +15,7 @@ export function ExperienceContent() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Experience header */}
         <div className="mb-12">
-          <p className="font-mono text-primary text-sm mb-2">// experience</p>
+          <p className="font-mono text-primary text-sm mb-2">{"// experience"}</p>
           <h1 className="text-4xl font-bold gradient-text mb-3">{t("experience-title")}</h1>
           <p className="text-muted-foreground">{t("experience-subtitle")}</p>
         </div>
