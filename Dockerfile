@@ -2,16 +2,19 @@
 FROM node:22-alpine AS deps
 WORKDIR /app
 
-RUN corepack enable && corepack prepare pnpm@latest --activate
+# pnpm fixo na versão do lockfile: o "latest" mudou de major e passou a
+# recusar o install por causa dos build scripts ignorados (ERR_PNPM_IGNORED_BUILDS).
+RUN corepack enable && corepack prepare pnpm@10.5.0 --activate
 
-COPY package.json pnpm-lock.yaml ./
+# pnpm-workspace.yaml leva a lista de build scripts ignorados de propósito.
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 RUN pnpm store prune || true && pnpm install --frozen-lockfile
 
 # =================== STAGE 2: Build ===================
 FROM node:22-alpine AS builder
 WORKDIR /app
 
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN corepack enable && corepack prepare pnpm@10.5.0 --activate
 
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
